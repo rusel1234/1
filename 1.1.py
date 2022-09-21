@@ -33,10 +33,23 @@ print(b)
 # math.sqrt(4) - вычисляет корень числа 4
 
 # TODO: 
-a = input('a= ')
-b = input('b= ')
-x = input('x= ')
-c = input('c= ')
-from math import sqrt
-x = sqrt(4)
-print(a*x + b*x + c == 0)
+import math
+print("Введите коэффициенты для уравнения")
+a = float(input('a= '))
+if a == 0:
+    print("a не должно быть 0, введите другое значение")
+a = float(input('a= '))
+b = float(input('b= '))
+x = float(input('x= '))
+c = float(input('c= '))
+D = b ** 2 - 4 * a * c
+if D < 0:
+  print("Корней нет")
+elif D == 0:
+  x = -b / 2 * a
+  print (x)
+else:
+  x1 = (-b + math.sqrt(D)) / (2 * a)
+  x2 = (-b - math.sqrt(D)) / (2 * a)
+  print(x1)
+  print(x2)
